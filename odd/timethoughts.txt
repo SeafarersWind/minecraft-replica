@@ -1,0 +1,26 @@
+11,643,609,600,000 - timeanddate
+11,644,473,600,000 - windows calculator
+
+
+
+
+first seed:
+8208 0630 CCA7
+
+second seed:
+820D D8DC 2AD5
+
+third seed:
+8208 0630 CCC3
+
+i:
+10 41BB 1800 0000
+
+j:
+410 4031
+
+long result:
+10 41BB 1C10 4031
+
+double result:
+0.5080237911333879

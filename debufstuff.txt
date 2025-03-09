@@ -1,0 +1,14 @@
+
+section .data									;
+.t db "!"										;
+section .text									;
+push  0											;
+push  _buffer									;
+push  1											;
+push  .t										;
+push  dword[_StdOutHandle]						;
+call  _WriteFile@20								;
+
+call _GetLastError@0
+push eax
+call fPrinthex32

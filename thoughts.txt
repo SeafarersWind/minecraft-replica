@@ -1,0 +1,159 @@
+x            = seeeeeeeeeeemmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+
+exp          = e - 1022
+y            = s01111111110mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+
+y *= 1 << 5  = s10000000011mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+hi = (int) y
+y -= hi      = s01111111110.....mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+
+y *= 1 << 16 = s10000001110mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.....
+lo = (int) y
+y -= lo      = s01111111110................mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.....
+
+m.limbs[1] = (hi << (16) | lo
+
+y *= 1 << 16 = s10000001110mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.....................
+hi = (int) y
+y -= hi      = s01111111110................mmmmmmmmmmmmmmm.....................
+
+y *= 1 << 16 = s10000001110mmmmmmmmmmmmmmm.....................................
+lo = (int) y
+y -= lo      = s01111111110....................................................
+
+m.limbs[0] = (hi << 16) | lo
+
+
+||  <- 32-bit limbs
+exp =  [-1022..1025]
+
+
+shift = exp % 32
+index = exp / 32
+sig = 00000000000000000000000000000000 00000000000..................... ................................ << shift
+[whole+index] = sig
+
+for l=63;l>=0;l--
+ if [whole+l-32]==0 loop
+ for i=l;i>=0;i--
+  x = remainder<<32 | [whole+i]
+  [whole+i] = x / 1000000000
+  remainder = x % 1000000000
+ for i=9;i>0;i--
+  [strindex--] = '0' + remainder%10
+  remainder /= 10
+
+eemmmmmmmm
+seeeeeeeeeeeeeeemmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+
+0.5
+3FFE80000000000000000
+
+1.0
+3FFF80000000000000000
+
+2.0
+400080000000000000000
+
+-1.0
+BFFF80000000000000000
+
+0x8000 bits
+32,767 bits
+
+0x400 dwords
+1024  dwords
+
+0x3FFE
+0x1FC
+508
+
+0x3FFF
+0x1FC
+508
+
+0x4000
+0x200
+512
+
+<< 1
+
+0x3FFE
+0x1FC
+508
+
+0x3FFF
+0x200
+512
+
+0x4000
+0x200
+512
+
+
+201 200 1FF 1FE 1FD 1FC
+00  00  80  00  00  00
+*10
+00  05  00  00  00  00
+
+
+
+
+
+320
+zpc
+
+--- >
+--c <
+z-- =
+zpc ?
+
+
+
+
+
+
+
+mark <= position <= limit <= capacity
+
+clear()
+ position = 0; limit = capacity; -mark
+
+flip()
+ limit = position; potition = 0; -mark
+
+put()
+ position < limit; [position] = float; position++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+n = f(n\4)*g(n%4) + f(n\4+1)*g(n%4+4) + f(n\4+2)*g(n%4+8) + f(n\4+3)*g(n%4+12)
+

@@ -1,0 +1,26 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		},
+		{
+			"path": "C:\\Users\\user\\Projects\\Minecraft Secrets\\.betacraft\\versions\\pc-132011 src\\src\\com\\mojang\\rubydung"
+		},
+		{
+			"path": "C:\\Users\\user\\Projects\\Minecraft Secrets\\.betacraft\\versions\\pc-132011 src\\lwjgl-source-2.9.0\\src\\java\\org\\lwjgl"
+		},
+		{
+			"path": "C:\\Users\\user\\Projects\\Minecraft Secrets\\.betacraft\\versions\\pc-132011 src\\lwjgl-source-2.9.0\\src\\generated\\org\\lwjgl"
+		},
+		{
+			"path": "C:\\Users\\user\\Projects\\Minecraft Secrets\\.betacraft\\versions\\pc-132011 src\\lwjgl-source-2.9.0\\src\\native\\windows"
+		},
+		{
+			"path": "C:\\Users\\user\\Projects\\Minecraft Secrets\\.betacraft\\versions\\pc-132011 src\\lwjgl-source-2.9.0\\src\\native\\generated"
+		},
+		{
+			"path": "C:\\Users\\user\\Projects\\Minecraft Secrets\\.betacraft\\versions\\pc-132011 src\\lwjgl-source-2.9.0\\src"
+		}
+	]
+}
