@@ -1,3 +1,5 @@
 This is an abandoned experiment to replicate [Minecraft version rd-132211](https://minecraft.wiki/w/Java_Edition_pre-Classic_rd-132211) in assembly code with the goal to have it run identically to the original game. It was created by converting Minecraft's Java code to assembly code and studying LWJGL's source code.
 
 When the program runs, it creates a window that matches Minecraft's window configuration. Nothing is rendered, but X, Y, and Z coordinates of the player are displayed in the command line. The player moves with WASD, rises with space, and rotates with the mouse. The player falls and collides with blocks, and it falls out of the world if it reaches the world's positive edge (256 in either the X or Z direction). The game crashes if any of the coordinates reach below 0. No block-breaking or placing is implemented, although the block matrix should be fully generated, including its light columns.
+
+The program is assembled in NASM. An assembled binary that runs the program exists in the repository and is called run.exe. Alternatively, go!.bat assembles and links the program with NASM and GoLink.
